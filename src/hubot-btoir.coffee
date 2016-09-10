@@ -30,7 +30,7 @@ module.exports = (robot) ->
         message = "Error: Something was wrong!"
       else
         message = "Stop air-conditioning."
-    msg.send message
+      msg.send message
 
 
   robot.respond /(aircon|エアコン) on/i, (msg) ->
@@ -41,7 +41,7 @@ module.exports = (robot) ->
         message = "Error: Something was wrong!"
       else
         message = "Start air-conditioning."
-    msg.send message
+      msg.send message
 
 
   robot.respond /(light|電気) off/i, (msg) ->
@@ -52,7 +52,7 @@ module.exports = (robot) ->
         message = "Error: Something was wrong!"
       else
         message = "Turn off the light."
-    msg.send message
+      msg.send message
 
 
   robot.respond /(light|電気) on/i, (msg) ->
@@ -63,7 +63,7 @@ module.exports = (robot) ->
         message = "Error: Something was wrong!"
       else
         message = "Turn on the light."
-    msg.send message
+      msg.send message
 
 
   robot.respond /(light|電気) night/i, (msg) ->
@@ -74,4 +74,4 @@ module.exports = (robot) ->
         message = "Error: Something was wrong!"
       else
         message = "Turn the light to night mode."
-    msg.send message
+      msg.send message
