@@ -11,7 +11,20 @@ http://bit-trade-one.co.jp/BTOpicture/Products/005-RS/
 sudo apt-get install libusb-1.0-0 libusb-1.0-0-dev libusb-dev
 ```
 
+### setup for alpine linux
+
+```
+apk update
+apk add libusb-dev
+cd /opt/
+git clone https://github.com/kjmkznr/bto_ir_cmd.git
+cd bto_ir_cmd
+make
+```
+
 ## Usage
+
+* ``docker run`` with ``--privileged`` option.
 
 ```
 hubot aircon|エアコン off: send aircon_off code in ir_codes.json.
