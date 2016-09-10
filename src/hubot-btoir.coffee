@@ -27,55 +27,51 @@ module.exports = (robot) ->
     message = ""
     child_process.exec "/opt/bto_ir_cmd/bto_ir_cmd -e -t " + code, (err, stdout, stderr) ->
       if err
-        message "Error: Something was wrong!"
+        message = "Error: Something was wrong!"
       else
-        message "Stop air-conditioning."
+        message = "Stop air-conditioning."
     msg.send message
 
 
-module.exports = (robot) ->
   robot.respond /(aircon|エアコン) on/i, (msg) ->
     code = codes.aircon_on
     message = ""
     child_process.exec "/opt/bto_ir_cmd/bto_ir_cmd -e -t " + code, (err, stdout, stderr) ->
       if err
-        message "Error: Something was wrong!"
+        message = "Error: Something was wrong!"
       else
-        message "Start air-conditioning."
+        message = "Start air-conditioning."
     msg.send message
 
 
-module.exports = (robot) ->
   robot.respond /(light|電気) off/i, (msg) ->
     code = codes.light_off
     message = ""
     child_process.exec "/opt/bto_ir_cmd/bto_ir_cmd -e -t " + code, (err, stdout, stderr) ->
       if err
-        message "Error: Something was wrong!"
+        message = "Error: Something was wrong!"
       else
-        message "Turn off the light."
+        message = "Turn off the light."
     msg.send message
 
 
-module.exports = (robot) ->
   robot.respond /(light|電気) on/i, (msg) ->
     code = codes.light_on
     message = ""
     child_process.exec "/opt/bto_ir_cmd/bto_ir_cmd -e -t " + code, (err, stdout, stderr) ->
       if err
-        message "Error: Something was wrong!"
+        message = "Error: Something was wrong!"
       else
-        message "Turn on the light."
+        message = "Turn on the light."
     msg.send message
 
 
-module.exports = (robot) ->
   robot.respond /(light|電気) night/i, (msg) ->
     code = codes.light_night
     message = ""
     child_process.exec "/opt/bto_ir_cmd/bto_ir_cmd -e -t " + code, (err, stdout, stderr) ->
       if err
-        message "Error: Something was wrong!"
+        message = "Error: Something was wrong!"
       else
-        message "Turn the light to night mode."
+        message = "Turn the light to night mode."
     msg.send message
