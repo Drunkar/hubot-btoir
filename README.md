@@ -17,8 +17,8 @@ sudo apt-get install libusb-1.0-0 libusb-1.0-0-dev libusb-dev
 apk update
 apk add libusb-dev
 cd /opt/
-git clone https://github.com/kjmkznr/bto_ir_cmd.git
-cd bto_ir_cmd
+https://github.com/Drunkar/bto_ir_advanced_cmd.git
+cd bto_ir_advanced_cmd
 make
 ```
 

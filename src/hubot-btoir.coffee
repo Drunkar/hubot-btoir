@@ -1,5 +1,5 @@
 # Description:
-#   Bot interface for BitTradeOne USB infrared remotecontroller kit.
+#   Bot interface for BitTradeOne USB infrared remotecontroller ADVANCE kit.
 #
 # Dependencies:
 #   child_process
@@ -19,13 +19,15 @@
 #
 
 child_process = require "child_process"
-codes = require("./ir_codes.json");
+codes = require "./ir_codes.json"
+
+CODE_PREFIX = "/opt/bto_ir_advanced_cmd/bto_advanced_USBIR_cmd -d "
 
 module.exports = (robot) ->
   robot.respond /(aircon|エアコン) off/i, (msg) ->
     code = codes.aircon_off
     message = ""
-    child_process.exec "/opt/bto_ir_cmd/bto_ir_cmd -e -t " + code, (err, stdout, stderr) ->
+    child_process.exec CODE_PREFIX + code, (err, stdout, stderr) ->
       if err
         message = "Error: Something was wrong!"
       else
@@ -36,7 +38,7 @@ module.exports = (robot) ->
   robot.respond /(aircon|エアコン) on/i, (msg) ->
     code = codes.aircon_on
     message = ""
-    child_process.exec "/opt/bto_ir_cmd/bto_ir_cmd -e -t " + code, (err, stdout, stderr) ->
+    child_process.exec CODE_PREFIX + code, (err, stdout, stderr) ->
       if err
         message = "Error: Something was wrong!"
       else
@@ -47,7 +49,7 @@ module.exports = (robot) ->
   robot.respond /(light|電気) off/i, (msg) ->
     code = codes.light_off
     message = ""
-    child_process.exec "/opt/bto_ir_cmd/bto_ir_cmd -e -t " + code, (err, stdout, stderr) ->
+    child_process.exec CODE_PREFIX + code, (err, stdout, stderr) ->
       if err
         message = "Error: Something was wrong!"
       else
@@ -58,7 +60,7 @@ module.exports = (robot) ->
   robot.respond /(light|電気) on/i, (msg) ->
     code = codes.light_on
     message = ""
-    child_process.exec "/opt/bto_ir_cmd/bto_ir_cmd -e -t " + code, (err, stdout, stderr) ->
+    child_process.exec CODE_PREFIX + code, (err, stdout, stderr) ->
       if err
         message = "Error: Something was wrong!"
       else
@@ -69,9 +71,20 @@ module.exports = (robot) ->
   robot.respond /(light|電気) night/i, (msg) ->
     code = codes.light_night
     message = ""
-    child_process.exec "/opt/bto_ir_cmd/bto_ir_cmd -e -t " + code, (err, stdout, stderr) ->
+    child_process.exec CODE_PREFIX + code, (err, stdout, stderr) ->
       if err
         message = "Error: Something was wrong!"
       else
         message = "Turn the light to night mode."
+      msg.send message
+
+
+  robot.respond /(tv|テレビ)$/i, (msg) ->
+    code = codes.tv_power
+    message = ""
+    child_process.exec CODE_PREFIX + code, (err, stdout, stderr) ->
+      if err
+        message = "Error: Something was wrong!"
+      else
+        message = "Power tv."
       msg.send message

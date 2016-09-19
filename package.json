@@ -1,8 +1,8 @@
 
 {
   "name": "hubot-btoir",
-  "version": "1.0.0",
-  "description": "Bot interface for BitTradeOne USB infrared remotecontroller kit.",
+  "version": "2.0.0",
+  "description": "Bot interface for BitTradeOne USB infrared remotecontroller ADVANCE kit.",
   "main": "index.coffee",
   "repository": {
     "type": "git",
