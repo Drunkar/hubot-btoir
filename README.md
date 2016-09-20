@@ -1,11 +1,11 @@
 # Hubot BTOIR
 
-Bot interface for BitTradeOne USB infrared remotecontroller kit.
-http://bit-trade-one.co.jp/BTOpicture/Products/005-RS/
+Bot interface for BitTradeOne USB infrared remotecontroller ADVANCE kit.
+http://bit-trade-one.co.jp/product/module/adir01p/
 
 ## Dependencies
 
-* https://github.com/kjmkznr/bto_ir_cmd
+* https://github.com/Drunkar/bto_ir_advanced_cmd
 
 ```
 sudo apt-get install libusb-1.0-0 libusb-1.0-0-dev libusb-dev
