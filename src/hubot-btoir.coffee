@@ -13,6 +13,7 @@
 #   hubot light|電気 off: send light_off code in ir_codes.json.
 #   hubot light|電気 on: send light_on code in ir_codes.json.
 #   hubot light|電気 night: send light_night code in ir_codes.json.
+#   hubot tv|テレビ: tv power toggle.
 #
 # Author:
 #   Drunkar <drunkars.p@gmail.com>
