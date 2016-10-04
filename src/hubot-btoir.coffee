@@ -22,7 +22,8 @@
 child_process = require "child_process"
 codes = require "./ir_codes.json"
 
-CODE_PREFIX = "/opt/bto_ir_advanced_cmd/bto_advanced_USBIR_cmd -d "
+# example: "/opt/bto_ir_advanced_cmd/bto_advanced_USBIR_cmd -d "
+CODE_PREFIX = process.env.HUBOT_BTOIR_CODE_PREFIX
 
 module.exports = (robot) ->
   robot.respond /(aircon|エアコン) off/i, (msg) ->
